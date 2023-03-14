@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="Adriana Poznanski">
+  <meta name="keywords" content="Carnegie Mellon University">
+  <meta name="description" content="Adriana Poznanski">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" media="all" type="text/css" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <title>Adriana Poznanski</title>
+</head>
+
+<body>
+  <div class="navContainer">
+    <div class="nav" id="myNav">
+      <a href="index.html">← Home</a>
+    </div>
+  </div>
+  <div class="content" id="replit">
+    <div class="intro-head">
+      <img class="headimg" src="images/replit.gif">
+      <h4>Replit</h4>
+    </div>
+    <div class="intro pb-5">
+      <div class="row">
+        <div class="col-12 col-md-4 detail">
+          <h4>Role</h4>
+          <p>Product designer</p>
+        </div>
+        <div class="col-12 col-md-4 detail">
+          <h4>Collaborators</h4>
+          <p>Tyler Angert,<br>Devin Halladay</p>
+        </div>
+        <div class="col-12 col-md-4 detail">
+          <h4>Timeline</h4>
+          <p>June - August 2022</p>
+        </div>
+      </div>
+    </div>
+    <div class="pb-5">
+      <h4>Overview</h4>
+      <p>Replit is a multiplayer computer for creating and sharing software. I spent the past summer designing features
+        for Replit's workspace to enhance the developer experience. My work primarily focused on collaborative code
+        commentary and file management.</p>
+    </div>
+    <div class="pb-5">
+      <h4>Redesigning threads</h4>
+      <p class="pb-3">Threads is Replit's in-editor code annotation feature. Threads was first introduced to the
+        workspace in early
+        2021, and the feature was in need of a revamp to adhere to Replit's new design system and address persistent
+        usability issues. The biggest pain point we needed resolve was overlapping content. Thread indicators and groups
+        were poorly positioned within the workspace and visually blocked code and shell output. We also needed to
+        redesign the feature to adhere to a major workspace design update. This update allowed users to customize their
+        workspace with tabs and panes for any tools—so we needed to convert the threads popover into a pane. Additionally we needed to design a mobile solution for threads, as they were only available on the desktop version of Replit until this point.</p>
+      <img class="mockup" src="images/t1.png">
+      <h6 class="pb-3">Thread indicators covering code, threads covering Markdown preview.</h6>
+      <img class="mockup" src="images/t2.png">
+      <h6 class="pb-3">Thread groups covering Markdown preview.</h6>
+    </div>
+    <div class="pb-5">
+      <h4>Exploration and iterations</h4>
+      <p class="pb-3">We first began exploring different ways that we could address the issue of threads covering content. We experimented with placing threads in the sidebar that hosts the file tree and other workspace tools, and using a chat-like full pane view for conversations. We also experimented with using space within the editor, where users were actually writing code. We felt that the contextual context of the code was important, and that extending the editor to make room for conversations dispersed within the code could make for a more optimized interaction.</p>
+      <img class="mockup" src="images/t4.png">
+      <h6 class="pb-3">Threads in the sidebar.</h6>
+      <img class="mockup" src="images/t5.png">
+      <h6 class="pb-3">Threads in the left gutter space of the editor.</h6>
+      <img class="mockup" src="images/t6.png">
+      <h6 class="pb-3">Threads inline with code in the editor.</h6>
+     <p class="pb-3">We also created a few different translational designs for mobile threads. Designing a solution that allowed the user to view their code and threads at the same time was much more difficult for mobile because of the reduced screen space. We experimented with displaying threads in a bottom drawer on the screen that the user could easily open and close, and a collapsible component placed inline within the code editor.</p>
+      <img class="mockup" src="images/t11.png">
+      <h6 class="pb-3">Mobile threads exploration.</h6>
+      <p class="pb-3">After a few rounds of critique and some more experimentation with prototyping, it became clear that the inline threads provided the most ergonomic interaction. Placing threads in an inline component that can expand and collapse alleviated the issue of covering content. Having individual threads within the editor also made the interaction model easier to define. We decided to keep individual or "singleton" threads inline in the editor, and have a global threads "inbox" pane which allows the user to view cards of all the threads in their files. All of the conversation interactions like starting and replying to threads occur within the editor. Within the threads inbox, we added the ability to search, sort, and filter all the threads within a project. Based on that interaction model, we defined the basic interface architecture below.</p>
+      <img class="mockup" src="images/t3.png">
+      <h6 class="pb-3">Interface architecture for different components of threads.</h6>
+      <p class="pb-3">We designed multiple iterations of inline threads, changing different aspects of the design like the thread indicator, the header of the inline component, and the elevation level (as indicated by the color).</p>
+      <img class="mockup" src="images/t7.png">
+      <h6 class="pb-3">Inline thread spanning full-width of the workspace, with participants displayed in the header.</h6>
+      <img class="mockup" src="images/t8.png">
+      <h6 class="pb-3">Inline threads with thread indicator in the left gutter of the editor and higher elevation than the editor.</h6>
+    </div>
+    <div class="pb-5">
+      <h4>Final solutions</h4>
+      <p class="pb-3">We decided to move forward with a thread indicator in the right gutter of the editor, so as not to be confused or interfere with breakpoints on the line numbers. We also chose to use a lower elevation color for the thread component, to give the impression of peeking inside the code, or opening a drawer within the editor. We wanted to be very intentional about the design of the inline component, because we felt strongly about using it as a primitive for other in-editor AI features like Replit's "explain code."</p>
+      <img class="mockup" src="images/t9.png">
+      <h6 class="pb-3">Inline thread final solution.</h6>
+      <video class="pb-3" width="80%" autoplay controls>
+                <source src="images/t1.mp4" type="video/mp4">
+      </video>
+      <h6 class="pb-3">Video demo of creating a thread.</h6>
+      <p class="pb-3">For the threads pane we created a global inbox that allows the user to search, sort, and filter all the threads in their project. The inbox contains an accordion for each file within the project that can be opened to view all the threads in that specific file. Threads are displayed as cards which show the line number and a snippet of the first line of code that the thread refers to, and the inital comment from the user who started the thread. Clicking on a thread card from the pane opens the thread in the editor.</p>
+      <img class="mockup" src="images/t10.png">
+      <h6 class="pb-3">Threads pane final solution.</h6>
+            <video class="pb-3" width="80%" autoplay controls>
+                <source src="images/t2.mp4" type="video/mp4">
+      </video>
+      <h6 class="pb-3">Video demo of viewing threads within the editor and the threads pane.</h6>
+      <p class="pb-3">We used the same interface components and interaction model on desktop and mobile. Placing threads inline allowed us to maximize the small screen space we were working with, and prevented users from having to context switch between code and comments constantly.</p>
+      <img class="mockup" src="images/t12.png">
+      <h6 class="pb-3">Mobile threads final solution.</h6>
+            <video class="pb-3" width="80%" autoplay controls>
+                <source src="images/t3.mp4" type="video/mp4">
+      </video>
+      <h6 class="pb-3">Video demo of viewing and creating threads on mobile.</h6>
+  </div>
+    <div class="pb-5">
+      <h4>Conclusion</h4>
+      <p class="pb-3">The threads redesign has now been fully shipped on Replit! We've received overwhelmingly positive feedback, and I'm extremely proud to have been a part of this project. The inline component designed for threads will also become a new workspace primitive, allowing users to harness the power of Replit's AI features without ever having to leave the code editor. Working on this feature taught me a lot about fighting my fastidiousness. Replit has a reputation for <a class="link" href="https://twitter.com/amasad/status/1550647445159174145?s=20&t=6ViZGL_SE4dhCykKjetyhg" target="_blank">shipping fast</a>, and I soon realized that perfectionism hinders progress. Sharing work consistently, getting feedback often, and iterating quickly pushes a design much further than meticulous overthinking. I had to get over my fear of sharing work that I wasn't 100% happy with—the worst thing someone can say is that they know you can do better, which is really motivating! Each and every person on the Replit design team has had an influence on my growth as a designer. I'm grateful to have learned from the best, and contributed to such an amazing product pioneering the future of collaborative computing!
+      </p>
+      <p>File tree case study coming soon &#128524;</p>
+    </div>
+  </div>
+</body>
+
+</html>

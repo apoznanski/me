@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Adriana Poznanski">
+	<meta name="keywords" content="Carnegie Mellon University">
+	<meta name="description" content="Adriana Poznanski">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" media="all" type="text/css" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+	<title>Adriana Poznanski</title>
+</head>
+
+<body>
+    <div class="navContainer">
+    <div class="nav" id="myNav">
+      <a href="index.html">← Home</a>
+    </div>
+  </div>
+    <div class="content" id="resmed">
+        <div class="intro-head">
+            <img class="headimg" src="images/resmed.gif">
+            <h4>ResBud</h4>
+        </div>
+        <div class="intro pb-5">
+            <div class="row">
+                <div class="col-12 col-md-4 detail">
+                    <h4>Role</h4>
+                    <p>Product designer</p>
+                </div>
+                <div class="col-12 col-md-4 detail">
+                    <h4>Collaborators</h4>
+                    <p>Linda Xue,<br>Jongyeon Chae</p>
+                </div>
+                <div class="col-12 col-md-4 detail">
+                    <h4>Timeline</h4>
+                    <p>January 2022</p>
+                </div>
+            </div>
+        </div>
+        <div class="pb-5">
+            <h4>Challenge</h4>
+            <p>In this project, our team was challenged to create a native mobile app which provides a service to customers of ResMed, a medical device company. ResMed primarily serves patients with sleep apnea and other related respiratory conditions. Patients who require CPAP machines are left on their own to track the varying lifecycles of the machine parts, and replace them in a timely fashion. This responsibility raises many issues for customers and often prevents them from using their machines consistently, getting the sleep they need, and getting the most out of treatment. Our app aimed to address this issue and help users take regular care of their CPAP machines.</p>
+        </div>
+        <div class="pb-5">
+            <h4>Solution</h4>
+            <p>We created a mobile device management app which allows users to easily monitor the status of their machine parts at home and automates the process of purchasing and replacing expired parts. This service relieves the user of the responsibility of managing their medical device, and allows them to maintain consistent treatment without the stress of device maintenance. Not only does this solution increase customer satisfaction and loyalty, but it benefits other company stakeholders as well. With our app, ResMed store managers can gain a better sense of demand for machine parts and spend less time manually managing replacement orders. ResMed manuafacturers will also benefit from the data our service collects which can be used for quality assurance purposes.</p>
+        </div>
+        <div class="pb-5">
+            <h4>Stakeholder map</h4>
+            <p class="pb-3">To discover how we could provide new value to ResMed through a mobile service, we conducted research about the current state of the company. We created a stakeholder map to explore and understand the relationships between ResMed's different stakeholder groups. As a healthcare company, ResMed has many external collaborators beyond company employees—such as physicians and health insurance providers—that have a direct effect on the experience of patients. In our map we explored the complex relationships between the many stakeholders of ResMed. Through this process, we identified three main stakeholders: patients, manufacturers, and store managers.</p>
+            <img class="mockup" src="images/rmap.jpg">
+            <h6 class="pb-3">ResMed stakeholder map.</h6>
+        </div>
+        <div class="pb-5">
+            <h4>Initial wireframes</h4>
+            <p>After conducting initial research to learn more about ResMed's stakeholders, we began creating low fidelity wireframes of what our mobile service might look like. We decided to create an app that tracks CPAP machine part statuses and automates the process of replacing parts as they expire. In this prototype we explored the needs of CPAP machine users and how our service could improve ResMed's customer experience. These wireframes included a home page with a summary of the user's devices and individual machine parts along with their statuses. We prototyped a flow for a product expiration trigger in which the user would be prompted to order their replacement. We also prototyped an in-app purchase flow to ease the process of purchasing additional ResMed products. Finally, we included a prescription expiration trigger for users to request a prescription renewal from their physician and insurance provider in-app.</p>
+            <img class="mockup" src="images/r1.jpg">
+            <img class="mockup" src="images/r2.jpg">
+            <h6 class="pb-3">Initial wireframes of our mobile service.</h6>
+            <p>In class, we received a lot of great insight during critique to iterate our design for the next deliverable:</p>
+            <ul class="bullets">
+                <li>We needed to work on distinguishing our design from the ResMed device store.
+                </li>
+                <li>Our service should leverage data collection in some way to provide a better experience to the customer.
+                </li>
+                <li>We needed to consider how our service could benefit all of our identified stakeholders, not just customers.
+                </li>
+            </ul>
+            <p>We took this feedback into consideration when creating our next iteration of prototypes.
+            </p>
+        </div>
+        <div class="pb-5">
+            <h4>Iterations</h4>
+            <p>After receiving feedback during critique, we decided to redefine the goal of our service to innovate the way both individual customers and company side stakeholders manage the CPAP machine.</p>
+            <p>For customers, we wanted to reduce the risk of irregularities and detect any issues with devices early. We decided to utilize the audio sensor in the mobile device to detect the condition of the CPAP machine by monitoring for irregular sounds. This allows the app to inform the users proactively whenever the risk of malfunction rises and guide them to take action to prevent it.</p>
+            <p>We also wanted to innovate the troubleshooting process for users. We decided to utilize the mobile device's camera to implement image detection to look for any issues with the machine. This allows the app to detect any concerning changes in machine parts, and prompt the user to replace the part without them having to visit a ResMed store or speak with customer service.</p>
+            <img class="mockup" src="images/r3.jpg">
+            <h6 class="pb-3">Device troubleshooting screens.</h6>
+            <img class="mockup" src="images/r4.jpg">
+            <h6 class="pb-3">Product expiration trigger screens.</h6>
+            <p></p>
+        </div>
+        <div class="mockups pb-5">
+            <h4>Final solution</h4>
+            <p>For the final iteration of our prototype, our group continued to improve our design with the goal of finalizing our user flow, deepening the service's relationships with its stakeholders, and expanding the value of the data collected to the organization moving forward.</p>
+            <p>We added more design details and tried to strengthen the microinteractions of the app by adding back and edit buttons, enlarged images on select, and icons to indicate the system state to improve our feedback. We also focused more on the automation of our part replacement process so that we could provide users with a more service-oriented experience.</p>
+            <p>Further, we decided to emphasize the use of quantitative data to address the interests of our multiple stakeholders. As a result, we added detailed metrics in the "device" tab to help users track the status of each individual device part and take better regular care of them. This feature also allows manufacturers to collect more data about the usability of their product and provide them more insights into future opportunities for improvements.</p>
+            <img class="mockup" src="images/r5.png">
+            <img class="mockup" src="images/r6.png">
+            <img class="mockup" src="images/r7.png">
+            <h6 class="pb-3">Final solution prototype.</h6>
+            <video class="pb-3" width="80%" autoplay controls>
+                <source src="images/rdemo.mp4" type="video/mp4">
+            </video>
+            <h6 class="pb-3">Video demo of user flow.</h6>
+        </div>
+        <div class="pb-5">
+            <h4>Conclusion</h4>
+            <p>I really enjoyed the challenge this project brought of delivering value to all of ResMed's different stakeholders. When designing our app we worked to consider the benefits our service could provide not only to end-users but also ResMed store managers, device manufacturers, and overall management. This allowed us to create a service which leveraged data collection and smart sensor technology to improve ResMed's customer experience and general business operations. This project forced us as designers to not only consider the needs and goals of users but also those of other company stakeholders, which ultimately led us to create a service that provides cascading benefits for the company. Having evidence of stakeholder benefits also would make pitching to a company to get buy-in much simpler. This project showed me the extreme importance of stakeholder alignment in design, and how to leverage already existing company data to achieve that.</p>
+        </div>
+    </div>
+</body>
+</html>
